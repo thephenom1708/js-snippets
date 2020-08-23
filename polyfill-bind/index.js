@@ -12,7 +12,9 @@ const welcome = function (city, state, country) {
 Function.prototype.myBind = function (context, ...args1) {
     const fn = this;
     return function (...args2) {
-        fn.call(context, ...args1, ...args2);
+        fn.apply(context, [...args1, ...args2]);
+        // This can also be used
+        // fn.call(context, ...args1, ...args2);
     };
 }
 
