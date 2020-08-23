@@ -9,8 +9,11 @@ const welcome = function (city, country) {
 };
 
 // Polyfill
-Function.prototype.myBind = function (...args) {
-    return function () {};
+Function.prototype.myBind = function (context, ...args) {
+    const fn = this;
+    return function () {
+        fn.call(context);
+    };
 }
 
 // Execute myBind()
