@@ -12,10 +12,10 @@ const welcome = function (city, country) {
 Function.prototype.myBind = function (context, ...args) {
     const fn = this;
     return function () {
-        fn.call(context);
+        fn.call(context, ...args);
     };
 }
 
 // Execute myBind()
-const welcomePerson = welcome.myBind(person);
+const welcomePerson = welcome.myBind(person, 'Mumbai', 'India');
 welcomePerson();
