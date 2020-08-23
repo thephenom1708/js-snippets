@@ -14,5 +14,11 @@ const welcome = function (city, country) {
 }
 
 // Call
+console.log('\nExample for "call":')
 welcome.call(person1, 'Mumbai', 'India');
 welcome.call(person2, 'New York', 'US');
+
+// apply
+console.log('\nExample for "apply":')
+welcome.apply(person1, ['Mumbai', 'India']);
+welcome.apply(person2, ['New York', 'US']);
