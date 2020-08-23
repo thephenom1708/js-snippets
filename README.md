@@ -19,3 +19,5 @@ A collection of code snippets for various concepts in Functional Prgramming and 
 ---
 1. [Call, Apply and Bind functions in JS](https://github.com/thephenom1708/js-snippets/tree/8e24b7f2c1aa3df9f47ce1fdcbaaac9be173336c)
 2. [Pollyfill for `bind` function in JS](https://github.com/thephenom1708/js-snippets/tree/c30916b6133fcbd06b49bcbe66b215cab358f254)
+3. [Function Currying in JS](https://github.com/thephenom1708/js-snippets/tree/2ebdd358b68c90775f8479c1e19cbf7de1941815)
+4. Tail Call Optimisation with recursion (TCO)

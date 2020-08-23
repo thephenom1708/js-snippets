@@ -36,7 +36,7 @@ const tailRecursiveFactorial = (num) => {
      */
     return num * tailRecursiveFactorial(num -1);
 }
-console.log('\nNon Tail-Recursive Implementation:')
+console.log('\nTail-Recursive Implementation:')
 console.table([
     {
         number: 4,
