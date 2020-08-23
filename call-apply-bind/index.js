@@ -22,3 +22,11 @@ welcome.call(person2, 'New York', 'US');
 console.log('\nExample for "apply":')
 welcome.apply(person1, ['Mumbai', 'India']);
 welcome.apply(person2, ['New York', 'US']);
+
+// bind
+console.log('\nExample for "bind":')
+const welcomePerson1 = welcome.bind(person1, 'Mumbai', 'India');
+const welcomePerson2 = welcome.bind(person2, 'New York', 'US');
+
+welcomePerson1();
+welcomePerson2();
