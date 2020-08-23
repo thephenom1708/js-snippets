@@ -1,4 +1,4 @@
-# js-snippets
+# JS Snippets for Functional Programming Concepts
 A collection of code snippets for various concepts in Functional Prgramming and Frontend/UI Development using Javascript with ES6 standards.
 
 ### Running Snippets on Local Environment
