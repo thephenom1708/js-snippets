@@ -3,19 +3,19 @@ const person = {
     lastname: 'Walker'
 };
 
-const welcome = function (city, country) {
-    const message = `Welcome ${this.firstname} ${this.lastname} from ${city}, ${country}. Glad to see you here!`;
+const welcome = function (city, state, country) {
+    const message = `Welcome ${this.firstname} ${this.lastname} from ${city}, ${state}, ${country}. Glad to see you here!`;
     console.log(message);
 };
 
 // Polyfill
-Function.prototype.myBind = function (context, ...args) {
+Function.prototype.myBind = function (context, ...args1) {
     const fn = this;
-    return function () {
-        fn.call(context, ...args);
+    return function (...args2) {
+        fn.call(context, ...args1, ...args2);
     };
 }
 
 // Execute myBind()
-const welcomePerson = welcome.myBind(person, 'Mumbai', 'India');
-welcomePerson();
+const welcomePerson = welcome.myBind(person, 'Mumbai', 'Maharashtra');
+welcomePerson('India');
