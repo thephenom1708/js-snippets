@@ -46,3 +46,26 @@ console.table([
         result: fourMultipliedByTen
     }
 ]);
+
+// Advanced Generic Currying implementation for multi-argument functions
+function curry(func) {
+    return function curried(...args) {
+        if (args.length >= func.length) {
+            return func.apply(this, args);
+        } else {
+            return function (...args2) {
+                return curried.apply(this, args.concat(args2));
+            }
+        }
+    };
+}
+
+const sum = (num1, num2, num3) => {
+    return num1 + num2 + num3;
+}
+const curriedSum = curry(sum);
+
+console.log('\nAdvance generic currying for multi-argument functions:\n');
+console.log('Normal currying call:', curriedSum(1, 2, 3)); // 6, still callable normally
+console.log('Currying of 1st argument:', curriedSum(1)(2, 3)); // 6, currying of 1st arg
+console.log('Full Currying for each argument:', curriedSum(1)(2)(3)); // 6, full currying
