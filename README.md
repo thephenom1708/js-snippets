@@ -1,5 +1,5 @@
 # js-snippets
-A collection of code snippets for learning various concepts in Javascript with ES6 standards
+A collection of code snippets for various concepts in Functional Prgramming and Frontend/UI Development using Javascript with ES6 standards.
 
 ### Running Snippets on Local Environment
 ---
